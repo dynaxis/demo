@@ -1,7 +1,22 @@
 micronaut:
   application:
     name: demo
+  router:
+    static-resources:
+      domainA:
+        enabled: true
+        paths:
+          - classpath:a
+        mapping: /a/**
+      domainB:
+        enabled: true
+        paths:
+          - classpath:b
+        mapping: /b/**
 netty:
   default:
     allocator:
       max-order: 3
+
+
+
